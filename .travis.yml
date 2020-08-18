@@ -5,7 +5,7 @@ script: mvn verify
 after_success:
     - mvn -f core/pom.xml jacoco:report coveralls:report
 install: true
-sudo: false
+dist: trusty
 cache:
   directories:
     - $HOME/.m2
